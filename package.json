@@ -1,0 +1,17 @@
+{
+  "name": "vale-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/main.scss dist/nho.css && sass src/main.scss dist/nho.min.css --style=compressed",
+    "watch": "sass --watch src/main.scss:dist/nho.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.92.1"
+  }
+}

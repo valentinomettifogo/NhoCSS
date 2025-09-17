@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap');
+
+body {
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+// Text alignment
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+
+// Font weight
+.fw-light    { font-weight: 300; }
+.fw-normal   { font-weight: 400; }
+.fw-semibold { font-weight: 600; }
+.fw-bold     { font-weight: 700; }
+
+// Font size
+.text-xs   { font-size: 0.75rem; }
+.text-sm   { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg   { font-size: 1.125rem; }
+.text-xl   { font-size: 1.25rem; }
+.text-2xl  { font-size: 1.5rem; }
+
+// Line height
+.leading-none   { line-height: 1; }
+.leading-tight  { line-height: 1.25; }
+.leading-normal { line-height: 1.5; }
+.leading-loose  { line-height: 2; }

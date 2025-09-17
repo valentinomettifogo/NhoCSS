@@ -1,0 +1,16 @@
+// Palette minima
+$color-primary: #41b883;  // verde Vue per accenti
+$color-black:   #000000;  // testi principali
+$color-white:   #ffffff;  // sfondi principali
+$color-gray:    #cfcfcf;  // testi secondari, bordi, sfondi leggeri
+$bg-gray:       #f7f7f7;  // sfondo grigio chiaro
+
+// Utility classes
+.text-primary   { color: $color-primary; }
+.bg-primary     { background-color: $color-primary; }
+.border-primary { border-color: $color-primary; }
+
+.text-black     { color: $color-black; }
+.text-gray      { color: $color-gray; }
+.bg-white       { background-color: $color-white; }
+.bg-gray        { background-color: $bg-gray; }

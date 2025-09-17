@@ -1,0 +1,36 @@
+// Breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px
+);
+
+// Grid responsive: colonna full-width su mobile
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: $size) {
+    // Colonne generiche: esempio col-6 responsive
+    .col-6\@#{$breakpoint} { grid-column: span 6; }
+    .col-4\@#{$breakpoint} { grid-column: span 4; }
+    .col-3\@#{$breakpoint} { grid-column: span 3; }
+
+    // Spaziature responsive: esempio m-2@sm
+    .m-0\@#{$breakpoint} { margin: 0; }
+    .m-1\@#{$breakpoint} { margin: 0.25rem; }
+    .m-2\@#{$breakpoint} { margin: 0.5rem; }
+    .m-3\@#{$breakpoint} { margin: 1rem; }
+    .m-4\@#{$breakpoint} { margin: 2rem; }
+
+    // Padding responsive: esempio p-2@md
+    .p-0\@#{$breakpoint} { padding: 0; }
+    .p-1\@#{$breakpoint} { padding: 0.25rem; }
+    .p-2\@#{$breakpoint} { padding: 0.5rem; }
+    .p-3\@#{$breakpoint} { padding: 1rem; }
+    .p-4\@#{$breakpoint} { padding: 2rem; }
+
+    // Flex responsive: cambia direzione o allineamento
+    .flex-row\@#{$breakpoint} { flex-direction: row; }
+    .flex-column\@#{$breakpoint} { flex-direction: column; }
+    .justify-center\@#{$breakpoint} { justify-content: center; }
+    .items-center\@#{$breakpoint} { align-items: center; }
+  }
+}

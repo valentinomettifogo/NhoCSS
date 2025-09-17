@@ -1,0 +1,18 @@
+@use 'variables';
+@use 'reset';
+@use 'colors';
+@use 'utilities';
+@use 'container';
+@use 'grid';
+@use 'typography';
+@use 'responsive';
+
+// Extra
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: disc inside;
+    padding-left: 1.2em;
+}
