@@ -1,12 +1,355 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="it">
+
 <head>
-  <meta charset="UTF-8">
-  <title>NhoCSS Test</title>
-  <link rel="stylesheet" href="dist/nho.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NhoCSS — Documentazione (WIP)</title>
+
+    <!-- Font suggerito -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link al tuo CSS (modifica il path se necessario) -->
+    <link rel="stylesheet" href="dist/nho.css">
+
+    <style>
+        /* Piccolo styling locale per la doc (non fa parte di NhoCSS) */
+        :root {
+            --max-w: 1000px;
+            --accent: #41b883;
+            --muted: #666;
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            margin: 0;
+            color: #111;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrap {
+            max-width: var(--max-w);
+            width: 100%
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* spinge il menu in basso */
+            min-height: 100vh;
+            /* occupa tutta la viewport */
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            /* background: linear-gradient(180deg, rgba(65, 184, 131, 0.06), rgba(65, 184, 131, 0.02)); */
+            /* border: 1px solid rgba(65, 184, 131, 0.12); */
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero .toc {
+            margin-top: 2rem;
+        }
+
+
+        .toc {
+            display: flex;
+            gap: 1rem;
+            margin: 1.25rem 0;
+            flex-wrap: wrap;
+        }
+
+        .toc a {
+            display: inline-block;
+            padding: 0.45rem 0.75rem;
+            background: #f7f7f7;
+            border-radius: 6px;
+            color: #111;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border: 1px solid #eee;
+        }
+
+        .section {
+            margin: 2.25rem 0;
+            padding: 1.5rem;
+            border-radius: 6px;
+            background: #fafafa;
+            border: 1px solid #f0f0f0;
+        }
+
+        .section h2 {
+            margin-top: 0
+        }
+
+        pre {
+            background: #111;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow: auto;
+            font-size: 0.9rem
+        }
+
+        code {
+            /* background: #eee; */
+            padding: 0.15rem 0.25rem;
+            border-radius: 4px
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 3rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-align: center
+        }
+
+        .example-box {
+            padding: 1rem;
+            background: #fff;
+            border: 1px dashed #e5e5e5;
+            border-radius: 6px
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Ciao da NhoCSS!</h1>
-  <p>WORK IN PROGRESS!</p>
+    <div class="wrap">
+
+        <header class="hero" role="banner">
+            <div class="hero-content">
+                <h1>Questa documentazione è un mockup — <em>NhoCSS</em> è work-in-progress.</h1>
+                <h1>NhoCSS</h1>
+                <div class="quote">«Nho» significa “piccolo” in vietnamita — design minimal, pesi ridotti.</div>
+                <p class="lead">
+                    NhoCSS è un micro-framework CSS utility-first pensato per progetti leggeri, mashup e
+                    integrazioni dove serve solo l'essenziale: spacing, grid, flex e poche utilities. Questo sito è una
+                    documentazione WIP (work in progress).
+                </p>
+            </div>
+
+            <!-- Menu capitoli come footer dell'hero -->
+            <nav aria-label="Indice documentazione" class="toc">
+                <a href="#about">About</a>
+                <a href="#install">Install</a>
+                <a href="#reset">Reset</a>
+                <a href="#variables">Variabili</a>
+                <a href="#utilities">Utilities</a>
+                <a href="#grid">Grid</a>
+                <a href="#flex">Flex</a>
+                <a href="#typography">Tipografia</a>
+                <a href="#responsive">Responsive</a>
+                <a href="#examples">Esempi</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#license">License</a>
+            </nav>
+        </header>
+
+
+        <!-- DOCUMENTAZIONE -->
+        <main>
+
+            <section id="about" class="section">
+                <h2>About</h2>
+                <p class="muted">WIP — questa documentazione è un mock. Quando il progetto sarà pronto, aggiornerò le
+                    API e gli esempi reali.</p>
+                <p>NhoCSS è un set di utility CSS minimale, pensato per essere incluso facilmente via file singolo (o
+                    CDN). Filosofia: <strong>piccolo</strong>, <strong>componibile</strong>, <strong>senza
+                        dipendenze</strong>.</p>
+            </section>
+
+            <section id="install" class="section">
+                <h2>Install</h2>
+                <p>Disponibile come file singolo nella cartella <code>dist/</code>:</p>
+                <ul>
+                    <li><code>dist/nho.css</code> — file leggibile per sviluppo</li>
+                    <li><code>dist/nho.min.css</code> — versione minimizzata per produzione</li>
+                </ul>
+
+                <p>Esempio di inclusione:</p>
+                <pre><code>&lt;link rel="stylesheet" href="https://tuo-username.github.io/nho-css/dist/nho.min.css"&gt;</code></pre>
+            </section>
+
+            <section id="reset" class="section">
+                <h2>Reset</h2>
+                <p>NhoCSS include un reset minimale per uniformare comportamento tra browser. Esempio base incluso in
+                    <code>_reset.scss</code>:
+                </p>
+
+                <pre><code>/* reset minimo */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { line-height: 1.5; font-family: 'Be Vietnam Pro', sans-serif; }</code></pre>
+
+                <p>Se usi Bootstrap/Tailwind non è necessario includere questo reset (sono già presenti i rispettivi
+                    resets).</p>
+            </section>
+
+            <section id="variables" class="section">
+                <h2>Variabili (design tokens)</h2>
+                <p>NhoCSS espone poche variabili per mantenere il framework minimale. Definite in
+                    <code>_variables.scss</code>:
+                </p>
+
+                <pre><code>$color-primary: #41b883;   /* verde Vue (accent) */
+$color-black:   #000000;
+$color-white:   #ffffff;
+$color-gray:    #999999;</code></pre>
+
+                <p>Usa queste variabili per personalizzare tema e colori, oppure aggiungi override nel tuo progetto.</p>
+            </section>
+
+            <section id="utilities" class="section">
+                <h2>Utilities</h2>
+                <p>Set minimo di utility disponibili (spazio, testo, colore):</p>
+
+                <ul>
+                    <li><strong>Spacing</strong>: <code>.m-1</code>, <code>.m-2</code>, <code>.p-1</code>,
+                        <code>.p-2</code>, etc.
+                    </li>
+                    <li><strong>Text</strong>: <code>.text-left</code>, <code>.text-center</code>,
+                        <code>.text-right</code>, <code>.fw-bold</code>
+                    </li>
+                    <li><strong>Color</strong>: <code>.text-primary</code>, <code>.bg-primary</code>,
+                        <code>.bg-gray</code>
+                    </li>
+                </ul>
+
+                <p>Esempio rapido:</p>
+                <div class="example-box">
+                    <p class="m-2 p-2 text-center">Questo paragrafo usa <code>.m-2 .p-2 .text-center</code></p>
+                </div>
+            </section>
+
+            <section id="grid" class="section">
+                <h2>Grid</h2>
+                <p>NhoCSS fornisce una <em>row/col</em> grid in stile Bootstrap:</p>
+
+                <ul>
+                    <li><code>.row</code> — container con 12 colonne di base (grid-template-columns: repeat(12,1fr))
+                    </li>
+                    <li><code>.col</code> — colonna automatica (si divide lo spazio disponibile)</li>
+                    <li><code>.col-1</code> … <code>.col-12</code> — colonne che spanano N unità</li>
+                </ul>
+
+                <p>Esempio:</p>
+
+                <pre><code>&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;4/12&lt;/div&gt;
+  &lt;div class="col-4"&gt;4/12&lt;/div&gt;
+  &lt;div class="col-4"&gt;4/12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col"&gt;auto&lt;/div&gt;
+  &lt;div class="col"&gt;auto&lt;/div&gt;
+  &lt;div class="col"&gt;auto&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="flex" class="section">
+                <h2>Flex</h2>
+                <p>Utility flex minimal ma componibile (ispirate a Bootstrap):</p>
+
+                <ul>
+                    <li><code>.flex</code> — display:flex</li>
+                    <li><code>.flex-row</code> / <code>.flex-column</code> — direzione</li>
+                    <li><code>.flex-wrap</code> — wrap</li>
+                    <li><code>.justify-center</code>, <code>.justify-between</code>, ... — allineamento orizzontale</li>
+                    <li><code>.items-center</code>, <code>.items-start</code> — allineamento verticale</li>
+                    <li><code>.flex-center</code> — scorciatoia per centrare orizz. e vert.</li>
+                </ul>
+
+                <p>Esempio:</p>
+                <pre><code>&lt;div class="flex justify-between items-center"&gt;
+  &lt;div&gt;left&lt;/div&gt;
+  &lt;div&gt;right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="typography" class="section">
+                <h2>Tipografia</h2>
+                <p>NhoCSS usa di default il font <code>Be Vietnam Pro</code> (import incluso in
+                    <code>dist/nho.css</code>). Utility disponibili:
+                </p>
+
+                <ul>
+                    <li><code>.text-xs</code> … <code>.text-2xl</code> — dimensioni</li>
+                    <li><code>.fw-light</code>, <code>.fw-normal</code>, <code>.fw-semibold</code>,
+                        <code>.fw-bold</code>
+                    </li>
+                    <li><code>.leading-normal</code>, <code>.leading-tight</code> — line-height</li>
+                </ul>
+            </section>
+
+            <section id="responsive" class="section">
+                <h2>Responsive</h2>
+                <p>Breakpoints minimi: <code>sm (576px)</code>, <code>md (768px)</code>, <code>lg (992px)</code>. Il
+                    file <code>_responsive.scss</code> fornisce varianti base per colonne e spacing (es.
+                    <code>.col-6@md</code>, <code>.m-2@sm</code>).
+                </p>
+
+                <p>Esempio (mobile-first):</p>
+                <pre><code>@media (min-width: 768px) {
+  .col-6\@md { grid-column: span 6; }
+}</code></pre>
+            </section>
+
+            <section id="examples" class="section">
+                <h2>Esempi</h2>
+                <p>Piccoli esempi pratici per partire velocemente.</p>
+
+                <h3>Esempio layout card</h3>
+                <pre><code>&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;&lt;div class="example-box"&gt;Card 1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="col-4"&gt;&lt;div class="example-box"&gt;Card 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class="col-4"&gt;&lt;div class="example-box"&gt;Card 3&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3>Esempio navbar semplice</h3>
+                <pre><code>&lt;header class="flex justify-between items-center p-3"&gt;
+  &lt;div class="fw-bold"&gt;Logo&lt;/div&gt;
+  &lt;nav class="flex gap-2"&gt;
+    &lt;a class="text-primary" href="#"&gt;Docs&lt;/a&gt;
+    &lt;a href="#"&gt;Examples&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </section>
+
+            <section id="roadmap" class="section">
+                <h2>Roadmap (WIP)</h2>
+                <ul>
+                    <li>Componenti base: button, card, alert</li>
+                    <li>Varianti responsive più complete</li>
+                </ul>
+            </section>
+
+            <section id="license" class="section">
+                <h2>License</h2>
+                <p>NhoCSS è rilasciato sotto licenza <strong>MIT</strong> (work in progress). Quando il progetto sarà
+                    pronto, aggiungerò il file <code>LICENSE</code> nel repository.</p>
+            </section>
+
+        </main>
+
+    </div>
 </body>
+
 </html>
