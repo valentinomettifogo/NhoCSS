@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -561,10 +560,6 @@ body {
   align-self: stretch;
 }
 
-body {
-  font-family: "Be Vietnam Pro", sans-serif;
-}
-
 .text-left {
   text-align: left;
 }
@@ -792,6 +787,24 @@ body {
     align-items: center;
   }
 }
+@font-face {
+  font-family: "Be Vietnam Pro";
+  src: url("./fonts/BeVietnamPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  src: url("./fonts/BeVietnamPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
