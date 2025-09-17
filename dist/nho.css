@@ -1,0 +1,12 @@
+/* NhoCSS - Test Build */
+/* Font base: Be Vietnam Pro */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+h1 {
+  color: red;
+}
