@@ -1,16 +1,17 @@
 {
-  "name": "vale-css",
+  "name": "nhocss",
   "version": "1.0.0",
-  "description": "",
+  "description": "My small CSS framework",
+  "author": "Valentino Mettifogo",
   "main": "index.js",
   "scripts": {
     "build": "sass src/main.scss dist/nho.css && sass src/main.scss dist/nho.min.css --style=compressed",
-    "watch": "sass --watch src/main.scss:dist/nho.css"
+    "watch": "sass --watch src/main.scss:dist/nho.css",
+    "docs": "node generate-docs.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "sass": "^1.92.1"
   }

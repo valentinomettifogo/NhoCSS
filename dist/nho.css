@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -368,22 +367,6 @@ body {
   padding-bottom: 2rem;
 }
 
-.w-100 {
-  width: 100%;
-}
-
-.w-75 {
-  width: 75%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-25 {
-  width: 25%;
-}
-
 .border {
   border: 1px solid #000;
 }
@@ -415,6 +398,74 @@ body {
   .container {
     width: 80%;
   }
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-75 {
+  height: 75%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-h-full {
+  max-height: 100%;
 }
 
 .grid {
@@ -491,7 +542,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Desktop breakpoint (lg ≥ $breakpoint-lg) */
 @media (min-width: 1200px) {
   .flex-row\@lg {
     flex-direction: row;
@@ -500,6 +550,26 @@ body {
     flex-direction: column;
   }
 }
+.g-1 {
+  gap: 1rem;
+}
+
+.g-2 {
+  gap: 2rem;
+}
+
+.g-3 {
+  gap: 3rem;
+}
+
+.g-4 {
+  gap: 4rem;
+}
+
+.g-5 {
+  gap: 5rem;
+}
+
 .justify-start {
   justify-content: flex-start;
 }

@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'colors' as *;
 
-// Margin
+// @docs: Margins and Paddings
 @each $key, $value in $spacers {
   .m-#{$key} { margin: $value; }
   .mt-#{$key} { margin-top: $value; }
@@ -12,7 +12,6 @@
   .my-#{$key} { margin-top: $value; margin-bottom: $value; }
 }
 
-// Margin auto utilities
 .m-auto { margin: auto; }
 .mt-auto { margin-top: auto; }
 .mb-auto { margin-bottom: auto; }
@@ -21,7 +20,6 @@
 .mx-auto { margin-left: auto; margin-right: auto; }
 .my-auto { margin-top: auto; margin-bottom: auto; }
 
-// Padding
 @each $key, $value in $spacers {
   .p-#{$key} { padding: $value; }
   .pt-#{$key} { padding-top: $value; }
@@ -31,12 +29,6 @@
   .px-#{$key} { padding-left: $value; padding-right: $value; }
   .py-#{$key} { padding-top: $value; padding-bottom: $value; }
 }
-
-// Width utilities
-.w-100 { width: 100%; }
-.w-75 { width: 75%; } 
-.w-50 { width: 50%; }
-.w-25 { width: 25%; }
 
 .border { border: 1px solid #000; }
 .border-b { border-bottom: 1px solid $color-gray;}

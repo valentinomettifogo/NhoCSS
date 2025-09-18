@@ -1,31 +1,28 @@
+// @docs: Grid Utilities
 $breakpoint-lg: 1200px;
 
-// Grid container similar to Bootstrap
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); // 12 fixed columns
-  gap: 1rem; // gutter
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
 
-// Columns with fixed number of columns (col-1 → col-12)
 @for $i from 1 through 12 {
   .col-#{$i} {
     grid-column: span #{$i};
   }
 }
 
-// Automatic column, divides available space
 .col {
   grid-column: auto;
 }
 
-// Flex container
+// @docs: Flexbox Utilities
 .flex { display: flex; }
 .flex-row { flex-direction: row; }
 .flex-column { flex-direction: column; }
 .flex-wrap { flex-wrap: wrap; }
 
-/* Desktop breakpoint (lg ≥ $breakpoint-lg) */
 @media (min-width: $breakpoint-lg) {
   .flex-row\@lg {
     flex-direction: row;
@@ -36,14 +33,18 @@ $breakpoint-lg: 1200px;
   }
 }
 
-// Horizontal alignment
+@for $i from 1 through 5 {
+  .g-#{$i} {
+    gap: #{$i}rem;
+  }
+}
+
 .justify-start { justify-content: flex-start; }
 .justify-center { justify-content: center; }
 .justify-end { justify-content: flex-end; }
 .justify-between { justify-content: space-between; }
 .justify-around { justify-content: space-around; }
 
-// Vertical alignment
 .items-start { align-items: flex-start; }
 .items-center { align-items: center; }
 .items-end { align-items: flex-end; }
