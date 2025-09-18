@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 const srcDir = path.resolve("./src");
-const outputFile = path.resolve("./docs.html");
+const outputFile = path.resolve("./docs/docs.html");
 
 // Legge tutti i file .scss nella cartella src
 const scssFiles = fs.readdirSync(srcDir).filter(f => f.endsWith(".scss"));
@@ -56,7 +56,7 @@ const html = `
 
 <nav class="flex items-center justify-end py-2 px-4 bg-white">
     <a href="https://github.com/valentinomettifogo/NhoCSS" target="_blank" class="fw-semibold px-4 py-1 text-primary">github.com</a>
-    <a href="/index.html" class="fw-semibold px-4 py-1 text-primary">home</a>
+    <a href="/" class="fw-semibold px-4 py-1 text-primary">home</a>
 </nav>
 
 <div class="container">
